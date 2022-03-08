@@ -1,0 +1,10 @@
+*
+!.gitignore
+# General Purpose
+!configure.fish
+!take.fish
+# Windows interaction scripts
+!_win_offer.fish
+!_win_cp_impl.fish
+!win_cp.fish
+!win_chmod.fish
