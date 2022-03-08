@@ -1,7 +1,6 @@
 #!/usr/bin/env fish
 
-set -U EDITOR code
-
+set -U EDITOR code --wait
 
 function lb
     command latexmk -Werror -pdf -halt-on-error $argv
