@@ -2,6 +2,10 @@ function win_chmod --argument-names path --description "Fix permissions on a fil
     if test -d $path
         chmod 755 $path
     else
-        chmod 644 $path
+        if string match -q "*.exe" $path
+            chmod 755 $path
+        else
+            chmod 644 $path
+        end
     end
 end
