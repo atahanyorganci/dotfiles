@@ -23,6 +23,12 @@ function ll
     command exa -l --git-ignore $argv
 end
 
+# If configuring fish for Mac OS add brew to PATH
+if test (uname) = Darwin
+    set -U BREW_PREFIX /opt/homebrew
+    fish_add_path "$BREW_HOME/bin"
+end
+
 # Add exectuables installed by cargo to the PATH
 fish_add_path (realpath ~/.cargo/bin/)
 
