@@ -33,9 +33,11 @@ end
 fish_add_path (realpath ~/.cargo/bin/)
 
 # Path to Windows Home
-set -U WIN_ROOT /mnt/c
-set -U WIN_HOME /mnt/c/Users/Atahan
-fish_add_path "$WIN_ROOT/Program Files/Microsoft VS Code/bin"
+if test -n (uname -a | grep "WSL")
+    set -U WIN_ROOT /mnt/c
+    set -U WIN_HOME /mnt/c/Users/Atahan
+    fish_add_path "$WIN_ROOT/Program Files/Microsoft VS Code/bin"
+end
 
 eval (starship init fish)
 set fish_greeting
