@@ -23,8 +23,10 @@ function ll
     command exa -l --git-ignore $argv
 end
 
+set -U OS (os)
+
 # If configuring fish for Mac OS add brew to PATH
-if test (uname) = Darwin
+if test $OS = Darwin
     set -U BREW_PREFIX /opt/homebrew
     fish_add_path "$BREW_HOME/bin"
 end
@@ -33,7 +35,7 @@ end
 fish_add_path (realpath ~/.cargo/bin/)
 
 # Path to Windows Home
-if test -n (uname -a | grep "WSL")
+if test $OS = WSL
     set -U WIN_ROOT /mnt/c
     set -U WIN_HOME /mnt/c/Users/Atahan
     fish_add_path "$WIN_ROOT/Program Files/Microsoft VS Code/bin"
