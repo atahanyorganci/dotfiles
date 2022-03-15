@@ -41,5 +41,6 @@ if test $OS = WSL
     fish_add_path "$WIN_ROOT/Program Files/Microsoft VS Code/bin"
 end
 
+check_update
 eval (starship init fish)
 set fish_greeting
