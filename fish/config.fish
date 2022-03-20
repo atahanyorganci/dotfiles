@@ -44,3 +44,12 @@ end
 check_update
 eval (starship init fish)
 set fish_greeting
+
+# Created by `pipx`
+fish_add_path /home/atahan/.local/bin
+
+# Add `SCRIPTLY_ROOT` variable for `scriptly`
+set -Ux SCRIPTLY_ROOT $HOME/Development/tools
+
+# Optout of the .NET telementry
+set -Ux DOTNET_CLI_TELEMETRY_OPTOUT 1
