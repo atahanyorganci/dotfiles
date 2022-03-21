@@ -7,7 +7,13 @@ function check_update
     end
     set -l curr (pwd)
     cd $__fish_config_dir
-    git fetch && git status | grep "Your branch is behind" >/dev/null
+    set -l gs (git fetch && git status)
+    if test $status != 0
+        echo "FATAL: Failed to fetch updates"
+        cd $curr
+        return 1
+    end
+    echo $gs | grep "Your branch is behind" >/dev/null
     if test $status = 0
         echo "Your fish configuration is out of date. Please update it with 'git pull'."
     else
