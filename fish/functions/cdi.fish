@@ -13,7 +13,10 @@ function cdi --description "Interactively change directory"
     else
         set prompt cd
     end
-    set -l dir (z -l | awk '{ print $2; }' | peco --layout $layout --prompt $prompt $filter)
+    set -l dir (z -l | awk '{ print $2; }' | peco --layout $layout --prompt $prompt --on-cancel error)
+    if test $status != 0 -o "$dir" = ""
+        return 1
+    end
     if set -q _flag_dry_run
         echo "cd $dir"
     else
