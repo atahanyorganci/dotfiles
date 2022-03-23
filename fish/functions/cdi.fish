@@ -13,10 +13,21 @@ function cdi --description "Interactively change directory"
     else
         set prompt cd
     end
-    set -l dir (z -l | awk '{ print $2; }' | peco --layout $layout --prompt $prompt --on-cancel error)
+    set -l home_escaped (string replace -a "/" "\/" $HOME)
+    set -l z_list (z -l | awk '{ print $2; }')
+    set list "~"
+    for item in $z_list
+        if string match -rq "$home_escaped\/(?<rest>.*)" $item
+            set list "$list\n~/$rest"
+        else
+            set list "$list\n$item"
+        end
+    end
+    set -l dir (printf $list | peco --layout $layout --prompt $prompt --on-cancel error)
     if test $status != 0 -o "$dir" = ""
         return 1
     end
+    set -l dir (string replace -a "~" "$HOME" $dir)
     if set -q _flag_dry_run
         echo "cd $dir"
     else
