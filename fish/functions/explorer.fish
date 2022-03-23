@@ -1,8 +1,8 @@
 function explorer --description "Windows Explorer"
     set -l cmd "$WIN_ROOT/Windows/explorer.exe"
-    if test (count $argv) == 0
-        command $exe .
+    if test (count $argv) = 0
+        command $cmd .
     else
-        command $exe $argv
+        command $cmd $argv
     end
 end
