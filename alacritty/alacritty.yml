@@ -1,0 +1,19 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Window Dimensions
+window:
+  dimensions:
+    columns: 120
+    lines: 48
+
+# Font configuration
+font:
+  point_size: 12.0
+  normal:
+    family: CaskaydiaCove Nerd Font
+  bold:
+    family: CaskaydiaCove Nerd Font
+  italic:
+    family: CaskaydiaCove Nerd Font
+  bold_italic:
+    family: CaskaydiaCove Nerd Font
