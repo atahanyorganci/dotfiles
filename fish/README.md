@@ -4,10 +4,21 @@ Configuration for [fish-shell](https://github.com/fish-shell/fish-shell/), feel 
 
 ## Getting Started
 
+### Fish Plugings
+
 This setup requires following fish plugins to work
 - [`fisher`](https://github.com/jorgebucaran/fisher) plugin manager for installing and removing plugins
 - [`pisces`](https://github.com/laughedelic/pisces) inserts matching quotes like VS Code
 - [`z`](https://github.com/jethrokuan/z) keeps track of frequently visited directories
+
+```sh
+# install fisher
+$ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+# install fish plugins
+$ fisher install laughedelic/pisces jethrokuan/z
+```
+
+### Commandline Tools
 
 Required packages
 - [`peco`](https://github.com/peco/peco) for interactive filtering tool
