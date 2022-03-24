@@ -1,6 +1,6 @@
 # Fish Config
 
-Configuration for fish-shell, feel free to use and redistribute!
+Configuration for [fish-shell](https://github.com/fish-shell/fish-shell/), feel free to use and redistribute!
 
 ## Getting Started
 
