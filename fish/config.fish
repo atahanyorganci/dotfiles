@@ -73,3 +73,7 @@ set -Ux SCRIPTLY_ROOT $HOME/Development/tools
 
 # Optout of the .NET telementry
 set -Ux DOTNET_CLI_TELEMETRY_OPTOUT 1
+
+# Configure `fzf.fish` keybindings
+fzf_configure_bindings
+fzf_configure_bindings --git_log=\cg

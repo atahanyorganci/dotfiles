@@ -36,7 +36,7 @@ Required packages
 
 | Feature           | Keybinding                  | Option       |
 | ----------------- | --------------------------- | ------------ |
-| Search directory  | Ctrl+F (F for file)         | --directory  |
+| Search directory  | Alt+Ctrl+F (F for file)     | --directory  |
 | Search git log    | Ctrl+G (G for log)          | --git_log    |
 | Search git status | Ctrl+Alt+S (S for status)   | --git_status |
 | Search history    | Ctrl+R     (R for reverse)  | --history    |
@@ -45,6 +45,5 @@ Required packages
 
 **Note:** This configuration isn't the default run following commands to configure `fzf`.
 ```sh
-$ fzf_configure_bindings --directory=\cf # bind search dir to Ctrl+F
 $ fzf_configure_bindings --git_log=\cg # bind searching git log to Ctrl+G
 ```
