@@ -66,7 +66,7 @@ eval (starship init fish)
 set fish_greeting
 
 # Created by `pipx`
-fish_add_path /home/atahan/.local/bin
+fish_add_path $HOME/.local/bin
 
 # Add `SCRIPTLY_ROOT` variable for `scriptly`
 set -Ux SCRIPTLY_ROOT $HOME/Development/tools
