@@ -2,6 +2,26 @@
 
 set -U EDITOR code
 
+function gc --wraps "git commit" --description "git commit"
+    command git commit $argv
+end
+
+function ga --wraps "git add" --description "git add"
+    if test (count $argv) -gt 0
+        command git add $argv
+    else
+        command git add .
+    end
+end
+
+function gl --wraps "git log" --description "git log"
+    if test (count $argv) -gt 0
+        command git log $argv
+    else
+        command git log --oneline --pretty=format:'%Cgreen(%cr)%Creset %Cred%h%Creset %s'
+    end
+end
+
 function lb
     command latexmk -Werror -pdf -halt-on-error $argv
 end
