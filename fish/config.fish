@@ -70,8 +70,10 @@ if test $OS = Darwin
     fish_add_path "$BREW_HOME/bin"
 end
 
-# Add exectuables installed by cargo to the PATH
-fish_add_path (realpath ~/.cargo/bin/)
+# Configure CARGO_HOME, RUSTUP_HOME and add cargo binaries to PATH
+set -Ux CARGO_HOME $XDG_DATA_HOME/cargo
+set -Ux RUSTUP_HOME $XDG_DATA_HOME/rustup
+fish_add_path $CARGO_HOME/bin
 
 # Path to Windows Home
 if test $OS = WSL
