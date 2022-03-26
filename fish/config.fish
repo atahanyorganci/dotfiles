@@ -58,6 +58,12 @@ end
 
 set -U OS (os)
 
+# XDG Base Directory Specification
+set -Ux XDG_CONFIG_HOME $HOME/.config
+set -Ux XDG_DATA_HOME $HOME/.local/share
+set -Ux XDG_CACHE_HOME $HOME/.cache
+set -Ux XDG_STATE_HOME $HOME/.local/state
+
 # If configuring fish for Mac OS add brew to PATH
 if test $OS = Darwin
     set -U BREW_PREFIX /opt/homebrew
