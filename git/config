@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	email = atahanyorganci@hotmail.com
+	name = Atahan Yorgancı
+[core]
+	editor = code --wait
