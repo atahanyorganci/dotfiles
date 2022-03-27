@@ -1,3 +1,3 @@
 function configure
-    $EDITOR ~/.config/fish/
+    $EDITOR $XDG_CONFIG_HOME
 end
