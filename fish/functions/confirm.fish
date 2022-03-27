@@ -1,8 +1,5 @@
-function confirm
-    argparse -n confirm -N 1 -X 1 'd/default=?' "s/suffix=?" r/retry -- $argv
-    if test $status != 0
-        echo "WRONG BITCH!"
-    end
+function confirm --description "Prompt user for confirmation (yes/no)"
+    argparse -n confirm -N 1 -X 1 'd/default=?' "s/suffix=?" r/retry -- $argv; or return 1
     set prompt $argv[1]
     switch "$_flag_default"
         case y Y
@@ -20,15 +17,15 @@ function confirm
     else
         set suffix ": "
     end
-    read -p "echo '$prompt $option$suffix'" -l answer
+    read -p "echo '$prompt $option$suffix'" -l answer; or return 1
     if test -z "$answer"
         set answer $default
     end
-    switch "$answer"
-        case y Y
-            return 0
-        case n N
-            return 1
+    switch (string lower $answer)
+        case y yes
+            echo y
+        case n no
+            echo n
         case "*"
             echo "ERROR: invalid input"
             return 1
