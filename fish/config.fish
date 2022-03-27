@@ -98,3 +98,7 @@ set -Ux DOTNET_CLI_TELEMETRY_OPTOUT 1
 # Configure `fzf.fish` keybindings
 fzf_configure_bindings
 fzf_configure_bindings --git_log=\cg
+
+# Set GOPATH
+set -Ux GOPATH $XDG_DATA_HOME/go
+fish_add_path $GOPATH/bin
