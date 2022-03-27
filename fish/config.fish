@@ -64,23 +64,22 @@ set -Ux XDG_DATA_HOME $HOME/.local/share
 set -Ux XDG_CACHE_HOME $HOME/.cache
 set -Ux XDG_STATE_HOME $HOME/.local/state
 
-# If configuring fish for Mac OS add brew to PATH
-if test $OS = Darwin
-    set -U BREW_PREFIX /opt/homebrew
-    fish_add_path "$BREW_HOME/bin"
+# OS dependent configurations
+switch $OS
+    case Darwin
+        # Initialize Homebrew
+        /opt/homebrew/bin/brew shellenv | source
+    case WSL
+        # Add WIN_ROOT and WIN_HOME to WSL environment
+        set -Ux WIN_ROOT /mnt/c
+        set -Ux WIN_HOME /mnt/c/Users/Atahan
+        fish_add_path "$WIN_ROOT/Program Files/Microsoft VS Code/bin"
 end
 
 # Configure CARGO_HOME, RUSTUP_HOME and add cargo binaries to PATH
 set -Ux CARGO_HOME $XDG_DATA_HOME/cargo
 set -Ux RUSTUP_HOME $XDG_DATA_HOME/rustup
 fish_add_path $CARGO_HOME/bin
-
-# Path to Windows Home
-if test $OS = WSL
-    set -U WIN_ROOT /mnt/c
-    set -U WIN_HOME /mnt/c/Users/Atahan
-    fish_add_path "$WIN_ROOT/Program Files/Microsoft VS Code/bin"
-end
 
 check_update
 eval (starship init fish)
