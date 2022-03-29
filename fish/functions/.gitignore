@@ -1,5 +1,6 @@
 *
 !.gitignore
+!README.md
 # Windows interaction scripts
 !_win_offer.fish
 !_win_cp_impl.fish

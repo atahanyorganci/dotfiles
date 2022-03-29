@@ -1,0 +1,36 @@
+# Functions
+
+- `cdi`: Interactively change directory
+- `check_update`
+- `configure`
+- `confirm`: Prompt user for confirmation (yes/no)
+- `doc_functions`
+- `explorer`: Windows Explorer
+- `fish_title`
+- `fisher`: A plugin manager for Fish
+- `fzf_configure_bindings`: Installs the default key bindings for fzf.fish with user overrides passed as options.
+- `ga` (`git add`): git add
+- `gc` (`git commit`): git commit
+- `gl` (`git log`): git log
+- `gs`: Pretty-print git status
+- `lb`
+- `lbc`
+- `lc`
+- `ll`
+- `make_fn`: Make function from command history
+- `nvm`: Node version manager
+- `open`: Open a file with default app based on mime type
+- `openi`: Open a file by choosing interactively
+- `os`: Get OS name
+- `quick_ignore`: Choose and copy .gitignore from github/gitignore
+- `quick_proj`: Quick project wizard
+- `save`
+- `show` (`git show`): git show
+- `take`
+- `tree`
+- `unsplash`: Download random images from Unsplash
+- `unstage` (`git reset`): Unstage files from stage
+- `win_chmod`: Fix permissions on a file or directory copied from Windows FS.
+- `win_cp`: Copy over files from Windows FS to WSL
+- `z`: jump around
+- `zo`: open target dir
