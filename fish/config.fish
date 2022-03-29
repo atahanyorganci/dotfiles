@@ -18,7 +18,7 @@ function gl --wraps "git log" --description "Git Log - Show commit logs"
     if test (count $argv) -gt 0
         command git log $argv
     else
-        command git log --oneline --pretty=format:'%Cgreen(%cr)%Creset %Cred%h%Creset %s'
+        command git log --oneline --pretty=format:'%Cgreen(%cr)%Creset %Cred%h%Creset %s %C(yellow)%d%Creset'
     end
 end
 
