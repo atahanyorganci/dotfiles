@@ -101,3 +101,6 @@ fzf_configure_bindings --git_log=\cg
 # Set GOPATH
 set -Ux GOPATH $XDG_DATA_HOME/go
 fish_add_path $GOPATH/bin
+
+# Move `.node_repl_history` to `XDG_STATE_HOME`
+set -Ux NODE_REPL_HISTORY $XDG_STATE_HOME/node_repl_history
