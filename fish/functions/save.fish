@@ -1,4 +1,4 @@
-function save -w funcsave
+function save -w funcsave -d "Save function to functions directory and update .gitignore"
     set -l functions "$__fish_config_dir/functions"
     set -l ignore "$functions/.gitignore"
     for arg in $argv

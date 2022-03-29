@@ -1,36 +1,29 @@
 # Functions
 
 - `cdi`: Interactively change directory
-- `check_update`
-- `configure`
+- `configure`: Open configuration for with default editor
 - `confirm`: Prompt user for confirmation (yes/no)
-- `doc_functions`
+- `doc_functions`: Generate markdown documentation for all user-defined functions
 - `explorer`: Windows Explorer
-- `fish_title`
-- `fisher`: A plugin manager for Fish
-- `fzf_configure_bindings`: Installs the default key bindings for fzf.fish with user overrides passed as options.
-- `ga` (`git add`): git add
-- `gc` (`git commit`): git commit
-- `gl` (`git log`): git log
+- `fish_title`: Set terminal title
+- `ga` (`git add`): Git Add - Add file contents to the index
+- `gc` (`git commit`): Git Commit - Record changes to the repository
+- `gl` (`git log`): Git Log - Show commit logs
 - `gs`: Pretty-print git status
-- `lb`
-- `lbc`
-- `lc`
-- `ll`
-- `make_fn`: Make function from command history
-- `nvm`: Node version manager
+- `lb`: Compile .tex file to PDF
+- `lbc`: Compile .tex file to PDF and clean TeX auxilary files
+- `lc`: Clean TeX auxilary files
+- `ll`: List files in current directory
 - `open`: Open a file with default app based on mime type
 - `openi`: Open a file by choosing interactively
-- `os`: Get OS name
+- `os`: Get OS name (WSL/Darwin/Linux)
 - `quick_ignore`: Choose and copy .gitignore from github/gitignore
 - `quick_proj`: Quick project wizard
-- `save`
-- `show` (`git show`): git show
-- `take`
-- `tree`
+- `save`: Save function to functions directory and update .gitignore
+- `show` (`git show`): Git Show - Show various types of objects and defaults to summary
+- `take`: Create a new directory and cd into it
+- `tree`: Show directory tree
 - `unsplash`: Download random images from Unsplash
 - `unstage` (`git reset`): Unstage files from stage
 - `win_chmod`: Fix permissions on a file or directory copied from Windows FS.
 - `win_cp`: Copy over files from Windows FS to WSL
-- `z`: jump around
-- `zo`: open target dir

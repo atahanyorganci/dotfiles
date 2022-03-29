@@ -1,4 +1,4 @@
-function os --description "Get OS name"
+function os --description "Get OS name (WSL/Darwin/Linux)"
     switch (uname -a)
         case "*WSL*"
             echo WSL
