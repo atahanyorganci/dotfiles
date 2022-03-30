@@ -26,12 +26,12 @@ function lb --description "Compile .tex file to PDF"
     command latexmk -Werror -pdf -halt-on-error $argv
 end
 
-function lbc --description "Compile .tex file to PDF and clean TeX auxilary files"
+function lbc --description "Compile .tex file to PDF and clean TeX auxiliary files"
     command latexmk -Werror -pdf -halt-on-error $argv
     command latexmk -c
 end
 
-function lc --description "Clean TeX auxilary files"
+function lc --description "Clean TeX auxiliary files"
     command latexmk -Werror -c $argv
 end
 

@@ -11,8 +11,8 @@
 - `gl` (`git log`): Git Log - Show commit logs
 - `gs`: Pretty-print git status
 - `lb`: Compile .tex file to PDF
-- `lbc`: Compile .tex file to PDF and clean TeX auxilary files
-- `lc`: Clean TeX auxilary files
+- `lbc`: Compile .tex file to PDF and clean TeX auxiliary files
+- `lc`: Clean TeX auxiliary files
 - `ll`: List files in current directory
 - `open`: Open a file with default app based on mime type
 - `openi`: Open a file by choosing interactively
