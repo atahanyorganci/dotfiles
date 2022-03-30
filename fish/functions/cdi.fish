@@ -23,7 +23,7 @@ function cdi --description "Interactively change directory"
             set list "$list\n$item"
         end
     end
-    set -l dir (printf $list | peco --layout $layout --prompt $prompt --on-cancel error)
+    set -l dir (printf $list | fzf --prompt="cd " --preview 'll --icons (string replace "~" $HOME {})')
     if test $status != 0 -o "$dir" = ""
         return 1
     end

@@ -22,7 +22,6 @@ $ fisher install laughedelic/pisces jethrokuan/z
 ### Commandline Tools
 
 Required packages
-- [`peco`](https://github.com/peco/peco) for interactive filtering tool
 - [`bat`](https://github.com/sharkdp/bat) modern alternative to `cat` with syntax highlighting
 - [`exa`](https://github.com/ogham/exa) modern replacement for `ls` with `.gitignore` support
 - [`fd`](https://github.com/sharkdp/fd) simple, fast and user-friendly alternative to `find`
