@@ -7,3 +7,4 @@ Configured programs
 - [`zsh`](zsh/README.md) shell designed for interactive use, although it is also a powerful scripting language.
 - [`ipython`](ipython/README.md) rich toolkit to help you make the most of using Python interactively
 - [`python`](python/README.md) general purpose scripting language.
+- [`kitty`](kitty/README.md) fast, feature-rich, GPU based terminal emulator

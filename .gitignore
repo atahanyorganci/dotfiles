@@ -7,3 +7,5 @@
 !ipython/
 !ipython/*/
 !python/
+!kitty/
+!kitty/*
