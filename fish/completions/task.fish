@@ -1,8 +1,21 @@
-#!/usr/bin/env fish
-
-set -l tasks (task --list-all | tail -n +2 | sed 's/* //' | sed "s/:[[:space:]]*/;/")
-for task in $tasks
-    set -l name (echo $task | awk -F';' '{print $1}')
-    set -l desc (echo $task | awk -F';' '{print $2}')
-    complete -f --command task -a "$name" -d "$desc"
-end
+complete -c task -s c -l color --description "colored output. Enabled by default. Set flag to false or use NO_COLOR=1 to disable (default true)"
+complete -c task -s C -l concurrency --description "limit number tasks to run concurrently"
+complete -c task -s d -l dir --description "sets directory of execution"
+complete -c task -l dry --description "compiles and prints tasks in the order that they would be runwithout executing them"
+complete -c task -s f -l force --description "forces execution even when the task is up-to-date"
+complete -c task -s h -l help --description "shows Task usage"
+complete -c task -s i -l init --description "creates a new Taskfile.yaml in the current folder"
+complete -c task -s l -l list --description "lists tasks with description of current Taskfile"
+complete -c task -s a -l list-all --description "lists tasks with or without a description"
+complete -c task -s o -l output --description "sets output style: [interleaved|group|prefixed]"
+complete -c task -l output-group-begin --description "message template to print before a task's grouped output"
+complete -c task -l output-group-end --description "message template to print after a task's grouped output"
+complete -c task -s p -l parallel --description "executes tasks provided on command line in parallel"
+complete -c task -s s -l silent --description "disables echoing"
+complete -c task -l status --description "exits with non-zero exit code if any of the given tasks is not up-to-date"
+complete -c task -l summary --description "show summary about a task"
+complete -c task -s t -l taskfile --description "choose which Taskfile to run. Defaults to \"Taskfile.yml\""
+complete -c task -s v -l verbose --description "enables verbose mode"
+complete -c task -l version --description "show Task version"
+complete -c task -s w -l watch --description "enables watch of the given task"
+complete -c task -f -n _task_should_offer -a "(_task_offer)"
