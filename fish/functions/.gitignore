@@ -29,3 +29,4 @@
 !pandoc_add.fish
 !pandoc_list.fish
 !pandoc_remove.fish
+!_pandoc_remove_offer.fish
