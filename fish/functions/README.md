@@ -17,6 +17,9 @@
 - `open`: Open a file with default app based on mime type
 - `openi`: Open a file by choosing interactively
 - `os`: Get OS name (WSL/Darwin/Linux)
+- `pandoc_add`: Install pandoc template
+- `pandoc_list`: List installed pandoc templates
+- `pandoc_remove`: Uninstall pandoc template
 - `quick_ignore`: Choose and copy .gitignore from github/gitignore
 - `quick_proj`: Quick project wizard
 - `save`: Save function to functions directory and update .gitignore
