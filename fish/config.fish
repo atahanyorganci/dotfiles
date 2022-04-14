@@ -112,3 +112,6 @@ set -Ux PYTHONHISTFILE $XDG_STATE_HOME/python/history
 # Configure kitty
 set -l KITTY_CONFIG_DIRECTORY $XDG_CONFIG_HOME/kitty
 set -l KITTY_CACHE_DIRECTORY $XDG_CACHE_HOME/kitty
+
+# User data dir for pandoc contains templates
+set -Ux PANDOC_DATA_DIR (pandoc -v | grep data | awk -F: '{ gsub(/ /,""); print $2; }')

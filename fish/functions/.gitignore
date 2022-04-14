@@ -26,3 +26,6 @@
 !doc_functions.fish
 !_task_should_offer.fish
 !_task_offer.fish
+!pandoc_add.fish
+!pandoc_list.fish
+!pandoc_remove.fish
