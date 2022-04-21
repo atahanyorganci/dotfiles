@@ -115,3 +115,7 @@ set -l KITTY_CACHE_DIRECTORY $XDG_CACHE_HOME/kitty
 
 # User data dir for pandoc contains templates
 set -Ux PANDOC_DATA_DIR (pandoc -v | grep data | awk -F: '{ gsub(/ /,""); print $2; }')
+
+# Volta Node.js Version Manager
+set -Ux VOLTA_HOME "$XDG_DATA_HOME/volta"
+fish_add_path "$VOLTA_HOME/bin" $PATH
