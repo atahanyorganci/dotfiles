@@ -64,6 +64,10 @@ set -Ux XDG_DATA_HOME $HOME/.local/share
 set -Ux XDG_CACHE_HOME $HOME/.cache
 set -Ux XDG_STATE_HOME $HOME/.local/state
 
+# Add .local/bin to `PATH`
+mkdir -p "$HOME/.local/bin"
+fish_add_path "$HOME/.local/bin"
+
 # OS dependent configurations
 switch $OS
     case Darwin
