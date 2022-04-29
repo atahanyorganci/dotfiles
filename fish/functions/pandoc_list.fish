@@ -10,9 +10,14 @@ function pandoc_list --description "List installed pandoc templates"
         echo "  -h/--help: print this message"
         return
     end
-    echo "Installed pandoc templates:"
-    for template in (ls -1 $PANDOC_DATA_DIR/templates/*.latex)
-        set -l name (basename $template)
-        echo "- $name"
+    set -l templates $PANDOC_DATA_DIR/templates/*.latex
+    if test (count $templates) -eq 0
+        echo "No pandoc templates installed"
+    else
+        echo "Installed pandoc templates:"
+        for template in $templates
+            set -l name (basename $template)
+            echo "- $name"
+        end
     end
 end
