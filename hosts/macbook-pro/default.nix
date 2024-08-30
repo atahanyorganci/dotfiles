@@ -30,6 +30,13 @@ in
   system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
   # Ensures compatibility with defaults from NixOS
   system.stateVersion = 4;
+  # Dock configuration
+  system.defaults = {
+    dock = {
+      autohide = true;
+      show-recents = false;
+    };
+  };
   # Users managed by Nix
   users.knownUsers = [ user.username ];
   users.users.${user.username} = {
