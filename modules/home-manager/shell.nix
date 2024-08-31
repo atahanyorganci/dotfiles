@@ -44,13 +44,14 @@ in
     programs.bash = lib.mkIf cfg.bash.enable {
       enable = true;
       enableCompletion = true;
+      historyFile = "${config.xdg.stateHome}/bash/history";
       initExtra = if cfg.fish.addInitExtra && cfg.bash.enable then initExtra else "";
     };
     programs.zsh = lib.mkIf cfg.zsh.enable {
       enable = true;
       enableCompletion = true;
       history = {
-        path = "${config.xdg.dataHome}/zsh/history";
+        path = "${config.xdg.stateHome}/zsh/history";
         share = true;
       };
       initExtra = if cfg.fish.addInitExtra && cfg.zsh.enable then initExtra else "";
