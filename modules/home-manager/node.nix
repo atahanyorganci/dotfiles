@@ -27,7 +27,16 @@ in
   config = lib.mkIf config.node.enable {
     home.sessionVariables = {
       NODE_REPL_HISTORY = "${config.xdg.stateHome}/node_repl_history";
+      NPM_CONFIG_USERCONFIG = "${config.xdg.configHome}/npm/npmrc";
       COREPACK_HOME = corepackHome;
+    };
+    home.file = {
+      "${config.xdg.configHome}/npm/npmrc".text = ''
+        prefix=${config.xdg.dataHome}/npm
+        cache=${config.xdg.cacheHome}/npm
+        init-module=${config.xdg.configHome}/npm/config/npm-init.js
+        logs-dir=${config.xdg.stateHome}/npm/logs
+      '';
     };
     home.sessionPath = [ corepackHome ];
     home.packages = [ node ];
