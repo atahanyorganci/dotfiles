@@ -7,6 +7,7 @@ in
   imports = [
     ../../modules/nix-darwin/homebrew.nix
     ../../modules/nix-darwin/shell.nix
+    ../../modules/nix-darwin/yabai.nix
   ];
   # Disable `nix-darwin` documentation
   documentation.enable = false;
@@ -45,5 +46,9 @@ in
     home = "/Users/${user.username}";
     shell = pkgs.${user.shell};
     uid = uid;
+  };
+  yabai = {
+    enable = true;
+    padding = 8;
   };
 }
